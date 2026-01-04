@@ -1,0 +1,9 @@
+{
+  "appId": "com.alexhab.todolistnew",
+  "appName": "ToDoList_new",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true
+  }
+}
