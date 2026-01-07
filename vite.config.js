@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+	plugins: [react()],
+	base: '/ToDoList_new/', // УКАЖИТЕ ПРАВИЛЬНЫЙ ПУТЬ
+	build: {
+		outDir: 'dist',
+		emptyOutDir: true,
+	}
 })

@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /ToDoList_new/
+
+# Если файл или папка существуют, используем их
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Перенаправляем все остальное на index.html
+RewriteRule . index.html [L]
+
+# Кэширование
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>

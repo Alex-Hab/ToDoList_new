@@ -7,6 +7,11 @@
 	align-items: center;
 	flex-direction: column;
 }
+@media (max-width: 479.98px) {
+	.App {
+		margin: 0 10px;
+	}
+}
 
 h1 {
 	text-align: center;
@@ -17,6 +22,13 @@ form {
 	display: flex;
 	margin-bottom: 30px;
 	gap: 10px;
+	max-width: 100%;
+	justify-content: center;
+}
+@media (max-width: 479.98px) {
+	form {
+		flex-wrap: wrap;
+	}
 }
 
 input[type="text"] {
@@ -25,8 +37,13 @@ input[type="text"] {
 	border: 2px solid #ddd;
 	border-radius: 4px;
 	font-size: 16px;
+	min-width: 200px;
 }
-
+@media (max-width: 479.98px) {
+	input {
+		width: 100%;
+	}
+}
 button[type="submit"] {
 	padding: 10px 20px;
 	background-color: #4CAF50;
@@ -35,6 +52,7 @@ button[type="submit"] {
 	border-radius: 4px;
 	cursor: pointer;
 	font-size: 16px;
+	flex: 0 0 auto; 
 }
 
 button[type="submit"]:hover {
@@ -51,6 +69,7 @@ h2 {
 	border-bottom: 2px solid #eee;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 ul {
@@ -79,7 +98,11 @@ input[type="checkbox"] {
 	height: 20px;
 	cursor: pointer;
 }
-
+@media (max-width: 479.98px) {
+	.input {
+		flex: 1;
+	}
+}
 span {
 	flex: 1;
 	font-size: 16px;
@@ -99,12 +122,18 @@ button {
 	font-size: 14px;
 	margin-left: 10px;
 }
+@media (max-width: 479.98px) {
+	button {
+		flex: 0 1 auto;
+	}
 
+}
 button:hover {
 	background-color: #cc0000;
 }
 .title-container {
 	min-width: 100%;
+	max-width: 100%;
 }
 .tasks-container {
 	display: grid;
@@ -114,7 +143,7 @@ button:hover {
 	width: 100%;
 	
 }
-@media (max-width: 320px) {
+@media (max-width: 479.98px) {
 	.tasks-container {
 		grid-template-columns: 1fr;
 	}
